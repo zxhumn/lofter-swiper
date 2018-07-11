@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-size: 16px;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.carelist {
+  padding: 0 0.4rem;
+}
+.carelist li .user {
+  margin: 0.4rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carelist li .user .userinfo {
+  display: flex;
+  align-items: center;
+}
+.carelist li .user .userinfo .icon {
+  width: 1.3866666667rem;
+  height: 1.3866666667rem;
+  border-radius: 50%;
+}
+.carelist li .user .userinfo .username {
+  margin-left: 0.4rem;
+  color: #666;
+  font-size: 0.4533333333rem;
+}
+.carelist li .user .time {
+  color: #999;
+  font-size: 0.3733333333rem;
+}
+.carelist li .title {
+  text-align: center;
+  color: #999;
+  font-size: 0.5333333333rem;
+  margin: 0.4rem;
+}
+.carelist li .images img {
+  width: 100%;
+  margin-bottom: 0.1333333333rem;
+}
+.carelist li .content {
+  padding: 0px 0.5333333333rem;
+  font-size: 0.3733333333rem;
+  color: #666;
+  margin: 0.1333333333rem;
+}
+.carelist li .trans {
+  padding: 0px 0.5333333333rem;
+  font-size: 0.48rem;
+  color: #999;
+  margin: 0.1333333333rem;
+}
+.carelist li .trans img {
+  display: inline-block;
+  width: 0.5333333333rem;
+  margin-right: 0.1066666667rem;
+}
+.carelist li .topic {
+  padding: 0px 0.5333333333rem;
+  font-size: 0.48rem;
+  color: #999;
+  margin: 0.1333333333rem;
+}
+.carelist li .topic span {
+  color: #999999;
+  font-weight: bold;
+  font-size: 0.64rem;
+}
+.carelist li .control {
+  border-top: 1px solid #ccc;
+  padding-top: 0.4rem;
+}
+.carelist li .control img {
+  width: 0.8rem;
+}
+.carelist li .control img:nth-child(2) {
+  margin-left: 0.4rem;
+  margin-right: 0.4rem;
+}
+
+/*# sourceMappingURL=care.css.map */

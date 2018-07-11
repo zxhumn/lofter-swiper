@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/message.css">
+    <style>
+        body {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 内容区域 -->
+        <div class="content">
+            <!-- tab栏滑动 -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!-- 第一屏 -->
+                    <div class="swiper-slide dynamic">
+                        <div class="swiper-container1">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- 真正的数据是放在这里面的 -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- 第二屏 -->
+                    <div class="swiper-slide information">
+                        
+                    </div>
+                    <!-- 第三屏 -->
+                    <div class="swiper-slide chat">
+                       
+                    </div>
+                </div>
+                <!-- 小点点 -->
+                <div class="swiper-pagination home-page"></div>
+            </div>
+        </div>
+        <!-- 占位区域 -->
+        <div class="placeholder"></div>
+    </div>
+    <div class="tabbar">
+        <a href="./index.html">
+            <img src="./img/01-app-icons/tab_01.png" alt="">
+            <p class="title">首页</p>
+        </a>
+        <a href="./find.html">
+            <img src="./img/01-app-icons/tab_02.png" alt="">
+            <p class="title">发现</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/tab_camera.png" alt="">
+        </a>
+        <a href="./message.html" class="active">
+            <img src="./img/01-app-icons/tab_03.png" alt="">
+            <p class="title">消息</p>
+        </a>
+        <a href="./mine.html">
+            <img src="./img/01-app-icons/tab_04.png" alt="">
+            <p class="title">我的</p>
+        </a>
+    </div>
+</body>
+</html>
+<script>
+     //实现左右滑动
+     var swiper = new Swiper('.swiper-container', {
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    // 内部滚动1
+    var swiper1 = new Swiper('.swiper-container1', {
+        nested: true,
+        direction: 'vertical',
+        slidesPerView: 'auto',
+        freeMode: true,
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+        mousewheel: true,
+        });
+
+    // 内部滚动2
+  
+
+
+    //轮播图
+    var swiper2 = new Swiper('.swiper-container2', {
+        nested:true,
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+       
+    </script>

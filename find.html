@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+
+    <style>
+        body {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main">
+        <div class="content">
+            <!-- 实现页面的内部滚动 -->
+            <div class="swiper-container1 find">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <!-- 实现搜索框 -->
+                        <div class="searchbar">
+                            <img src="./img/01-app-icons/explore_search.png" class="glass" alt="">
+                            <input type="text">
+                            <img src="./img/01-app-icons/dashboard_find_friend.png" class="user" alt="">
+                        </div>
+
+                        <!-- 轮播图 -->
+                        <div class="banner">
+                            <div class="swiper-container2">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner1.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner2.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner3.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner4.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner5.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner6.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner7.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner8.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner9.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="./img/05-banner/banner10.jpg" alt="">
+                                    </div>
+                        
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+
+                        <!-- 3d轮播 -->
+                        <div class="ddd">
+                            <div class="swiper-container3">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <p>美眉</p>
+                                        <img src="./img/02-head-icons/01.jpg" alt="">
+                                        <img src="./img/02-head-icons/02.jpg" alt="">
+                                        <img src="./img/02-head-icons/03.jpg" alt="">
+                                        <img src="./img/02-head-icons/04.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>美眉</p>
+                                        <img src="./img/02-head-icons/01.jpg" alt="">
+                                        <img src="./img/02-head-icons/02.jpg" alt="">
+                                        <img src="./img/02-head-icons/03.jpg" alt="">
+                                        <img src="./img/02-head-icons/04.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>美眉</p>
+                                        <img src="./img/02-head-icons/01.jpg" alt="">
+                                        <img src="./img/02-head-icons/02.jpg" alt="">
+                                        <img src="./img/02-head-icons/03.jpg" alt="">
+                                        <img src="./img/02-head-icons/04.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>美眉</p>
+                                        <img src="./img/02-head-icons/01.jpg" alt="">
+                                        <img src="./img/02-head-icons/02.jpg" alt="">
+                                        <img src="./img/02-head-icons/03.jpg" alt="">
+                                        <img src="./img/02-head-icons/04.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <p>美眉</p>
+                                        <img src="./img/02-head-icons/01.jpg" alt="">
+                                        <img src="./img/02-head-icons/02.jpg" alt="">
+                                        <img src="./img/02-head-icons/03.jpg" alt="">
+                                        <img src="./img/02-head-icons/04.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="placeholder"></div>
+    </div>
+
+    <div class="tabbar">
+        <a href="./index.html">
+            <img src="./img/01-app-icons/tab_01.png" alt="">
+            <p class="title">首页</p>
+        </a>
+        <a href="./find.html"  class="active">
+            <img src="./img/01-app-icons/tab_02.png" alt="">
+            <p class="title">发现</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/tab_camera.png" alt="">
+        </a>
+        <a href="./message.html">
+            <img src="./img/01-app-icons/tab_03.png" alt="">
+            <p class="title">消息</p>
+        </a>
+        <a href="./mine.html">
+            <img src="./img/01-app-icons/tab_04.png" alt="">
+            <p class="title">我的</p>
+        </a>
+    </div>
+
+    <script>
+        // 内部滚动
+        var swiper1 = new Swiper('.swiper-container1', {
+            nested: true,
+            direction: 'vertical',
+            slidesPerView: 'auto',
+            freeMode: true,
+            scrollbar: {
+              el: '.swiper-scrollbar',
+            },
+            mousewheel: true,
+          });
+
+
+        //轮播图
+        var swiper2 = new Swiper('.swiper-container2', {
+            nested:true,
+            pagination: {
+                el: '.swiper-pagination',
+            }
+        });
+
+        //3d轮播
+        var swiper3 = new Swiper('.swiper-container3', {
+            nested:true,
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows : true,
+            },
+        });
+    </script>
+
+  
+</body>
+</html>

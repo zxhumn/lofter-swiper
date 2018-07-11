@@ -1,0 +1,66 @@
+@import "./common.scss";
+
+.nav {
+    display: flex;
+    height: pr(112);
+    justify-content: space-around;
+
+    li {
+        width: pr(228);
+        color: #ccc;
+        font-size: pr(48);
+        line-height: pr(112);
+        text-align: center;
+    }
+
+    li.active {
+        border-bottom: pr(5) solid #a6e22d;
+        color: #000;
+    }
+}
+
+.userlist {
+
+    li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: pr(2) solid #ccc;
+        padding: pr(26) pr(24) pr(26) pr(38);
+        
+        .left {
+            display: flex;
+            
+            .icon {
+                width: pr(104);
+                height: pr(104);
+            }
+
+            .info {
+                margin-left: pr(38);
+
+                .name {
+                    font-size: pr(40);
+                    color: #9e9e9e;
+                }
+                .fans {
+                    font-size: pr(38);
+                    color: #999;
+                }
+            }
+        }
+
+        .orderbutton {
+            height: pr(80);
+            width: pr(156);
+            border-radius: pr(40);
+            border: pr(1) solid #c1d967;
+            font-size: pr(38);
+            color: #c1d967;
+            background: #fff;
+        }
+
+    }
+}
+
+

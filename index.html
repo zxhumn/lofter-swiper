@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="./lib/swiper/swiper.min.css">
+    <script src="./lib/swiper/js/swiper.min.js"></script>
+
+    <script src="./js/common.js"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/care.css">
+    <link rel="stylesheet" href="./css/order.css">
+
+    <style>
+        body {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <!-- 内容区域 -->
+        <div class="content">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide care">
+                        <!-- 第一屏 -->
+                        <div class="swiper-container2">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- 真正的数据是放在这里面的 -->
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="swiper-slide order">
+                            <!-- 第二屏 -->
+                            <div class="swiper-container1">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <!-- 真正的数据是放在这里面的 -->
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <!-- 小点点 -->
+                <div class="swiper-pagination home-page"></div>
+            </div>
+        </div>
+        <!-- 占位区域 -->
+        <div class="placeholder"></div>
+    </div>
+
+    <div class="tabbar">
+        <a href="./index.html" class="active">
+            <img src="./img/01-app-icons/tab_01.png" alt="">
+            <p class="title">首页</p>
+        </a>
+        <a href="./find.html">
+            <img src="./img/01-app-icons/tab_02.png" alt="">
+            <p class="title">发现</p>
+        </a>
+        <a href="">
+            <img src="./img/01-app-icons/tab_camera.png" alt="">
+        </a>
+        <a href="./message.html">
+            <img src="./img/01-app-icons/tab_03.png" alt="">
+            <p class="title">消息</p>
+        </a>
+        <a href="./mine.html">
+            <img src="./img/01-app-icons/tab_04.png" alt="">
+            <p class="title">我的</p>
+        </a>
+    </div>
+
+    <script>
+
+
+        $(function() {
+            //实现左右滑动
+            var swiper = new Swiper('.swiper-container', {
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+            });
+
+            //load方法，可以发起ajax请求，获取order.html内部，并且展示到dom元素中， ajax请求完成之后，我们可以做一些事情，做的这个事儿，就叫回调函数
+            // $(".swiper-container .order").load("./order.html", function() {
+
+            // });
+
+            $.ajax({
+                url: "./care.html",
+                async: true,
+                success: function(response) {
+                    $(".swiper-container .care .swiper-slide").html(response);
+
+                    //加载完数据之后，实现内部滚动
+                    var swiper2 = new Swiper('.swiper-container2', {
+                        direction: 'vertical',
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                        },
+                        mousewheel: true,
+                    });
+                }
+            });
+
+            $.ajax({
+                url: "./order.html",
+                async: true,
+                success: function(response) {
+                    //先加载数据
+                    $(".swiper-container .order .swiper-slide").html(response);
+
+                    //再实现内部滚动
+                    var swiper1 = new Swiper('.swiper-container1', {
+                        direction: 'vertical',
+                        slidesPerView: 'auto',
+                        freeMode: true,
+                        scrollbar: {
+                            el: '.swiper-scrollbar',
+                        },
+                        mousewheel: true,
+                    });
+                }
+            });
+        })
+    </script>
+</body>
+</html>
+
+<!-- 
+    内部滚动的实现步骤：
+    1. 实现html的主体结构
+    2. 添加内部滚动的js
+    3. 设置css
+ -->

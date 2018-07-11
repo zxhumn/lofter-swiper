@@ -1,0 +1,111 @@
+@import "./common.scss";
+
+
+.carelist {
+    padding: 0 pr(30);
+    li {
+        // 用户信息
+        .user {
+            margin: pr(30) 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            // 用户信息
+            .userinfo {
+                display: flex;
+                align-items: center;
+
+                // 头标
+                .icon {
+                    width: pr(104);
+                    height: pr(104);
+                    border-radius: 50%;
+                }
+
+                // 用户名
+                .username {
+                    margin-left: pr(30);
+                    color: #666;
+                    font-size: pr(34);
+                }
+            }
+
+            // 时间
+            .time {
+                color: #999;
+                font-size: pr(28);
+            }
+        }
+
+        // 标题
+        .title {
+            text-align: center;
+            color: #999;
+            font-size: pr(40);
+            margin: pr(30);
+        }
+
+        // 图片
+        .images {
+            img {
+                width: 100%;
+                margin-bottom: pr(10);
+            }
+        }
+
+        // 正文
+        .content {
+            padding: 0px pr(40);
+            font-size: pr(28);
+            color: #666;
+            margin: pr(10);
+        }
+
+        // 转载
+        .trans {
+            padding: 0px pr(40);
+            font-size: pr(36);
+            color: #999;
+            margin: pr(10);
+
+            // 转载小图标
+            img {
+                display: inline-block;
+                width: pr(40);
+                margin-right: pr(8);
+            }
+
+        }
+
+        // 话题
+        .topic {
+            padding: 0px pr(40);
+            font-size: pr(36);
+            color: #999;
+            margin: pr(10);
+
+            // 话题小井号
+            span {
+                color:#999999;
+                font-weight: bold;
+                font-size: pr(48); 
+            }
+        }
+
+        // 操作按钮
+        .control {
+            border-top: 1px solid #ccc;
+            padding-top: pr(30);
+
+            img {
+                width: pr(60);
+                &:nth-child(2) {
+                    margin-left: pr(30);
+                    margin-right: pr(30);
+                }
+            }
+
+        }
+    }
+}

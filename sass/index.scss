@@ -1,0 +1,259 @@
+@import "./common.scss";
+
+.main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    >.content {
+        position: relative;
+        // border: pr(5) solid #f00;
+        flex:1;
+
+        // 轮播的最外层的大盒子
+        >.swiper-container {
+            width: 100%;
+            height: 100%;
+
+            >.swiper-wrapper {
+                padding-top: pr(106);
+
+                // 具体的每一屏
+                >.swiper-slide {
+                    background-color: #fff;
+                }
+            }
+
+            // 订阅模块的css
+            .order {
+                position: relative;
+                .swiper-container1 {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                    //自适应高度，实现内部滚动必须添加
+                    .swiper-slide {
+                        height: auto;
+                        padding-bottom: pr(106);
+                    }
+                }   
+            }
+
+            //关注模块的css
+            .care {
+                position: relative;
+                .swiper-container2 {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+
+                    .swiper-slide {
+                        height: auto;
+                        padding-bottom: pr(106);
+                    }
+                }
+            }
+
+            // 小点点的大盒子
+            .home-page {
+                top: 0;
+                height: pr(106);
+                background-color: white;
+                display: flex;
+                justify-content: space-around;
+
+                //具体的每一个小点点
+                .swiper-pagination-bullet {
+                    //一开始是小点儿，现在改成广块
+                    height: 100%;
+                    width: 35%;
+                    border-radius: 0;
+                    margin: 0;
+
+                    //让文字居中 
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    // 把背景改成白色
+                    background-color: #fff;
+
+                    //非高亮状态
+                    opacity: 0.4;
+                    font-size: pr(44);
+
+                    // 给小点点加文字
+                    &:nth-child(1) {
+                        &::before{
+                            content: "关注";
+                            display: inline;
+                        }
+                    }
+                    
+                    &:nth-child(2) {
+                        &::before{
+                            content: "订阅";
+                            display: inline;
+                        }
+                    }
+                }
+
+                //小点点的高亮状态
+                .swiper-pagination-bullet-active {
+                    background-color: white;
+                    opacity: 1;
+                    box-shadow: 0px -3px 0px #a6e228 inset;
+                }
+            }
+        }
+
+        //发现页面的css
+        >.find {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            // swiper的bug， 可能会超出父盒子
+            overflow: hidden;
+
+            >.swiper-wrapper {
+                >.swiper-slide {
+                    height: auto;
+                    background-color: lightgray;
+                    
+                    //搜索框
+                    .searchbar {
+                        height: pr(110);
+                        width: 100%;
+                        padding: pr(10);
+                        background-color: #fff;
+                        
+                        input {
+                            width: 100%;
+                            height: 100%;
+                            border-radius: pr(10);
+                            background-color: lightgray;
+                            border: none;
+                            outline: none;
+                            padding-left: pr(120);
+                        }
+
+                        .glass {
+                            position: absolute;
+                            left: pr(40);
+                            top: pr(26);
+                            width: pr(50);
+                        }
+
+                        .user {
+                            position: absolute;
+                            right: pr(40);
+                            top: pr(20);
+                            width: pr(70);
+                        }
+                    }
+
+                    //轮播图
+                    .banner {
+                        width: 100%;
+                        .swiper-container2 {
+                            position: relative;
+                            .swiper-slide {
+                                width: 100%;
+                                img {
+                                    width: 100%;
+                                }
+                            }
+    
+                            .pagenation2.swiper-pagination-bullets {
+                                position: absolute;
+                                width: 100%;
+                                margin: 0;
+                                z-index: 100;
+                                text-align: center;
+                            }
+
+                        }
+                    }
+
+                    //3d轮播
+                    .ddd {
+                        margin-top: pr(30);
+                        width: 100%;
+                        .swiper-container3 {
+                            width: 100%;
+                            .swiper-slide {
+                                width: 80%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-items: flex-start;
+
+                                p {
+                                    width: 100%;
+                                    height: pr(80);
+                                    color: #666;
+                                    text-align: center;
+                                    line-height: pr(80);
+                                    background-color: #fff;
+                                }
+
+                                img {
+                                    width: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    .placeholder {
+        flex-basis: pr(118);
+    }
+}
+
+.tabbar {
+    position: fixed;
+    bottom: 0rem;
+    left: 0rem;
+    height: 1.5733rem;
+    width: 100%;
+    background-color: #d3d3d3;
+
+    display: flex;
+
+    justify-content: space-around;
+
+    a {
+        padding: 0rem 0.2667rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.32rem;
+        color: #487071;
+        opacity: 0.5;
+        img {
+            height: 0.7467rem;
+        }
+
+        p {
+            margin-top: 0.08rem;
+        }
+
+        &.active {
+            opacity: 1;
+        }
+
+        &:nth-child(3) {
+            opacity: 1;
+            img {
+                height: 1.0667rem;
+            }
+        }
+    }
+}
+
